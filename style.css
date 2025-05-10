@@ -127,4 +127,89 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Resp
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  .container {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+}
+
+/* ===========================
+   Tambahan CSS untuk halaman News dan Contact
+   =========================== */
+
+/* Berita - News */
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.news-image {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.news-item h3 {
+  margin: 0 0 10px 0;
+}
+
+.news-item a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.news-item a:hover {
+  color: #0096c7;
+  text-decoration: underline;
+}
+
+.news-item p {
+  margin: 0;
+  color: #555;
+}
+
+/* Form Kontak */
+.contact-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #023e8a;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+.contact-form button.cta-btn {
+  margin-top: 15px;
+}

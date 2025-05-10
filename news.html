@@ -9,12 +9,13 @@
 </head>
 <body>
   <header>
+    <img src="images/logo-pln.png" alt="Logo PLN" width="150" style="display:block; margin:0 auto 10px auto;" />
     <h1>PT PLN (Persero)</h1>
     <p>Menyediakan energi listrik untuk kehidupan yang lebih baik</p>
   </header>
 
   <nav>
-    <ul>
+    <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="news.html" class="active">News</a></li>
@@ -25,19 +26,28 @@
 
   <div class="container">
     <h2>Berita Terbaru</h2>
-    <ul>
-      <li>
-        <img src="images/pln-diskon.jpg" alt="Promo PLN Diskon" style="width:200px; float:left; margin-right:15px; border-radius:8px;" />
-        <h3><a href="news-detail.html">PLN Luncurkan Program Diskon Listrik</a></h3>
-        <p>PLN memberikan diskon khusus untuk pelanggan prabayar selama bulan ini.</p>
-        <div style="clear:both;"></div>
-      </li>
-      <!-- Tambah berita lain jika perlu -->
-    </ul>
+
+    <article class="news-item">
+      <img src="images/pln-diskon.jpg" alt="Promo Diskon PLN" class="news-image" />
+      <h3><a href="news-detail.html">PLN Luncurkan Program Diskon Listrik</a></h3>
+      <p>PLN memberikan diskon khusus untuk pelanggan prabayar selama bulan ini. Program ini bertujuan membantu masyarakat menghemat biaya listrik.</p>
+    </article>
+
+    <!-- Tambah berita lain jika perlu -->
   </div>
 
   <footer>
-    &copy; 2025 PT PLN (Persero). All rights reserved.
+    <div class="footer-content">
+      <p>PT PLN (Persero) &copy; 2025</p>
+      <p>Alamat: Jalan Durikosambi Blok N-I No.04, Jakarta 12160</p>
+      <p>Email: <a href="mailto:alfathurrahman009@gmail.com">alfathurrahman009@gmail.com</a> | Telp: 082181397610</p>
+      <p>
+        Ikuti kami: 
+        <a href="https://facebook.com/pln" target="_blank">Facebook</a> | 
+        <a href="https://twitter.com/pln" target="_blank">Twitter</a> | 
+        <a href="https://instagram.com/pln" target="_blank">Instagram</a>
+      </p>
+    </div>
   </footer>
 </body>
 </html>
