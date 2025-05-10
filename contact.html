@@ -14,7 +14,14 @@
     <p>Menyediakan energi listrik untuk kehidupan yang lebih baik</p>
   </header>
 
+  <!-- NAVIGASI RESPONSIF -->
   <nav>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <ul class="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
@@ -27,7 +34,7 @@
   <div class="container">
     <h2>Hubungi Kami</h2>
     <p>Silakan isi formulir di bawah ini untuk menghubungi kami.</p>
-    <form action="#" method="post" class="contact-form">
+    <form id="contact-form" action="#" method="post" class="contact-form" novalidate>
       <label for="name">Nama Lengkap:</label><br />
       <input type="text" id="name" name="name" required /><br /><br />
 
@@ -39,6 +46,7 @@
 
       <button type="submit" class="cta-btn">Kirim Pesan</button>
     </form>
+    <div id="form-message" style="font-weight:600; margin-top:10px;"></div>
   </div>
 
   <footer>
@@ -54,5 +62,43 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const formMessage = document.getElementById('form-message');
+
+      formMessage.textContent = '';
+      formMessage.style.color = 'red';
+
+      if (name === '') {
+        formMessage.textContent = 'Nama lengkap harus diisi.';
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === '') {
+        formMessage.textContent = 'Email harus diisi.';
+        return;
+      } else if (!emailRegex.test(email)) {
+        formMessage.textContent = 'Format email tidak valid.';
+        return;
+      }
+
+      if (message === '') {
+        formMessage.textContent = 'Pesan harus diisi.';
+        return;
+      }
+
+      formMessage.style.color = 'green';
+      formMessage.textContent = 'Pesan berhasil dikirim! Terima kasih.';
+
+      this.reset();
+    });
+  </script>
 </body>
 </html>
