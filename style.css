@@ -1,0 +1,121 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #222;
+}
+
+header {
+  background: #0057b8;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #0057b8;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #ffb300;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+h1, h2 {
+  color: #0057b8;
+}
+
+h3 {
+  color: #333;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.cta-btn {
+  background: #ffb300;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 16px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background: #ff9800;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+form label {
+  font-weight: 500;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 5px;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 8px 0;
+  }
+}
